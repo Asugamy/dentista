@@ -1,7 +1,7 @@
 import streamlit as st
 #import database as db
 import pandas as pd
-#import pywhatkit as kit
+import pywhatkit as kit
 
 st.title('Adicionar Cliente')
 
@@ -16,9 +16,9 @@ if crud == 'Adicionar':
         input_occupation = st.selectbox('Selecione sua profissão', ['Desenvoledor', 'Programador', 'Designer'])
         input_button_submit = st.form_submit_button('Enviar')
 
-    #if input_button_submit:
+    if input_button_submit:
    #     db.incluir(nome=input_name, idade=input_age, profissao=input_occupation)
-    #    kit.sendwhatmsg('+553888597211', 'Teste', 22, 50)
+        kit.sendwhatmsg('+553888597211', 'Teste', 22, 50)
         
 elif crud == 'Visualizar':
     lista_clientes = []
