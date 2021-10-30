@@ -1,5 +1,5 @@
 import streamlit as st
-import database as db
+# import database as db
 import pandas as pd
 import pywhatkit as kit
 
@@ -17,14 +17,14 @@ if crud == 'Adicionar':
         input_button_submit = st.form_submit_button('Enviar')
 
     if input_button_submit:
-        db.incluir(nome=input_name, idade=input_age, profissao=input_occupation)
+        #db.incluir(nome=input_name, idade=input_age, profissao=input_occupation)
         kit.sendwhatmsg('+553888597211', 'Teste', 22, 50)
         
 elif crud == 'Visualizar':
     lista_clientes = []
 
-    for cliente in db.listar():
-        lista_clientes.append([cliente['nome'], cliente['idade'], cliente['profissao']])
+    # for cliente in db.listar():
+      #  lista_clientes.append([cliente['nome'], cliente['idade'], cliente['profissao']])
 
     df = pd.DataFrame(
         lista_clientes,
